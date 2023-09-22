@@ -1,0 +1,19 @@
+.feature {
+    padding-left: 4.2rem;
+    width: 100%;
+    position: relative;
+
+    &__text {
+        @include p1();
+    }
+
+    &::before {
+        content: '';
+        background-color: black;
+        position: absolute;
+        top: 0.2rem;
+        left: 0;
+        width: 3rem;
+        height: 3rem;
+    }
+}

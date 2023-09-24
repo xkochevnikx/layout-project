@@ -39,3 +39,9 @@
     line-height: 1.8rem;
     color: $color;
 }
+
+@mixin image($bg: $primaryColor) {
+    object-fit: cover;
+    object-position: center;
+    background-color: $bg;
+}

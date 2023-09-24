@@ -70,3 +70,20 @@
         outline: none;
     }
 }
+
+%input {
+    color: $secondaryColor;
+    font-style: 1.6rem;
+    background-color: $white;
+    color: $secondaryColor;
+    padding: 1.4rem 1rem;
+    border: none;
+    border-radius: 0.5rem;
+    line-height: 1;
+}
+
+%textarea {
+    @extend %input;
+    resize: none;
+    height: 7rem;
+}

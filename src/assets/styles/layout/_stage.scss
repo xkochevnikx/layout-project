@@ -43,6 +43,11 @@
         margin-bottom: 2rem;
 
         @media ($tablet) {
+            max-width: 38rem;
+            margin-bottom: 0;
+        }
+
+        @media ($desktop) {
             max-width: 49rem;
             margin-bottom: 0;
         }

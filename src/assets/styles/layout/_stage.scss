@@ -1,0 +1,50 @@
+.stage {
+    @include section();
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+    background-color: $primaryColor;
+
+    &__wrapper {
+        display: flex;
+        flex-direction: column-reverse;
+
+        @media ($tablet) {
+            flex-direction: row;
+            justify-content: space-between;
+        }
+
+        @media ($desktop) {
+            padding-right: 0;
+            padding-left: 0;
+        }
+    }
+
+    &__title {
+        @include h1();
+    }
+
+    &__list {
+        @include lead();
+        padding-left: 2rem;
+        display: flex;
+        flex-direction: column;
+        gap: 1.2rem;
+
+        &-item {
+            list-style: url(../images/check.svg);
+            padding-left: 0.6rem;
+        }
+    }
+
+    &__image {
+        @include image($white);
+        height: 21rem;
+        width: 100%;
+        margin-bottom: 2rem;
+
+        @media ($tablet) {
+            max-width: 49rem;
+            margin-bottom: 0;
+        }
+    }
+}

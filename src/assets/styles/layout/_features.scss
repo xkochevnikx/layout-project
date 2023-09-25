@@ -2,11 +2,6 @@
     @include section();
     background-color: $lightGrey2;
 
-    &__wrapper {
-        display: flex;
-        flex-direction: column;
-    }
-
     &__title {
         @include h2(_, center);
         font-weight: 400;

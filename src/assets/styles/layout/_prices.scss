@@ -1,0 +1,32 @@
+.prices {
+    @include section();
+
+    &__title {
+        @include h2($primaryColor, center);
+    }
+
+    &__items {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        @media ($tablet) {
+            flex-direction: row;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            align-items: flex-end;
+        }
+
+        .price {
+            margin-bottom: 2rem;
+
+            &:last-child {
+                margin-bottom: 0;
+            }
+
+            @media ($desktop) {
+                margin-bottom: 0;
+            }
+        }
+    }
+}

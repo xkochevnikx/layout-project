@@ -1,0 +1,94 @@
+.footer {
+    display: flex;
+    flex-direction: column;
+
+    &__main {
+        @include section();
+        background-color: $primaryColor;
+    }
+
+    &__title {
+        @include h2($white, center);
+    }
+
+    &__contacts {
+        display: flex;
+        flex-direction: column;
+
+        @media ($desktop) {
+            flex-direction: row;
+            justify-content: center;
+            align-items: flex-start;
+        }
+    }
+
+    &__contact-form {
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+        margin-bottom: 4rem;
+
+        @media ($desktop) {
+            flex-basis: 50rem;
+            margin-bottom: 0;
+        }
+    }
+
+    &__input {
+        @extend %input;
+        margin-bottom: 2rem;
+    }
+
+    &__textaria {
+        @extend %textarea;
+        margin-bottom: 2rem;
+    }
+
+    &__btn {
+        @extend %btn;
+        align-self: center;
+    }
+
+    &__contact-items {
+        align-self: center;
+        display: flex;
+        flex-direction: column;
+
+        @media ($desktop) {
+            justify-content: flex-start;
+            align-self: start;
+            margin-left: 4rem;
+        }
+    }
+
+    &__links {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        margin-bottom: 2rem;
+
+        &-item {
+            @include link();
+            display: flex;
+            align-items: center;
+            margin-bottom: 1rem;
+            font-size: 1.6rem;
+
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+
+        &-img {
+            margin-right: 1rem;
+        }
+    }
+
+    &__copyright {
+        padding: 0.8rem 0 0 0.4rem;
+        &-text {
+            @include p2();
+            text-align: center;
+        }
+    }
+}

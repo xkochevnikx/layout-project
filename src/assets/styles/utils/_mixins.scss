@@ -46,6 +46,12 @@
     background-color: $bg;
 }
 
+@mixin link($color: $white) {
+    text-decoration: none;
+    color: $color;
+    cursor: pointer;
+}
+
 @mixin section($pt: 5rem, $pb: 5rem) {
     padding-top: $pt;
     padding-bottom: $pb;
@@ -93,4 +99,5 @@
     @extend %input;
     resize: none;
     height: 7rem;
+    font-family: $mainFont;
 }

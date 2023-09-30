@@ -1,10 +1,9 @@
-.features {
+.reviews {
     @include section();
-    background-color: $lightGrey2;
+    background-color: $grey;
 
     &__title {
-        @include h2(_, center);
-        font-weight: 400;
+        @include h2($primaryColor, center);
     }
 
     &__items {
@@ -13,11 +12,11 @@
 
         @media ($tablet) {
             flex-direction: row;
-            flex-wrap: wrap;
             justify-content: space-between;
+            flex-wrap: wrap;
         }
 
-        .feature {
+        .review {
             margin-bottom: 2rem;
 
             &:last-child {
@@ -25,7 +24,7 @@
             }
 
             @media ($tablet) {
-                flex-basis: calc(50% - 1rem);
+                flex-basis: calc(50% - 2rem);
                 margin-bottom: 0;
 
                 &:nth-child(n + 3) {

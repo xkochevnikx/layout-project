@@ -59,6 +59,20 @@
     padding-right: 1.5rem;
 }
 
+@mixin arrow($color: $primaryColor) {
+    position: absolute;
+    top: 50%;
+    transform: translate(0, -50%);
+    font-size: 2rem;
+    color: $color;
+    z-index: 1;
+    cursor: pointer;
+
+    @media ($tablet) {
+        font-size: 4rem;
+    }
+}
+
 %btn {
     display: inline-block;
     background-color: $white;

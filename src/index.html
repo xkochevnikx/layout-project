@@ -30,15 +30,20 @@
                     <div class="stage__image"></div>
                 </div>
             </section>
-            <!-- <section class="slider">
-                <div class="container slider__wrapper">
-                    <img
-                        src="./assets/images/html.png"
-                        alt="img"
-                        class="slider__image"
-                    />
+            <section class="slider container">
+                <img
+                    src="./assets/images/html.png"
+                    alt="img"
+                    class="slider__image"
+                />
+                <span class="slider__leftArrow">❮</span>
+                <span class="slider__rightArrow">❯</span>
+                <div class="slider__dotsBox">
+                    <span class="slider__dot"></span
+                    ><span class="slider__dot"></span
+                    ><span class="slider__dot"></span>
                 </div>
-            </section> -->
+            </section>
             <section class="about">
                 <div class="container about__wrapper">
                     <div class="about__text">
@@ -417,10 +422,49 @@ enter your message</textarea
                 </p>
             </div>
         </footer>
-        <script>
-            document.addEventListener('DOMContentLoaded', () => {
-                console.log('ee');
-            });
+        <script type="module">
+            let image = document.querySelector('.slider__image');
+            let left = document.querySelector('.slider__leftArrow');
+            let right = document.querySelector('.slider__rightArrow');
+            const image1 = new URL(
+                '../src/assets/images/html.png',
+                import.meta.url
+            );
+            const image2 = new URL(
+                '../src/assets/images/css.jpeg',
+                import.meta.url
+            );
+            const image3 = new URL(
+                '../src/assets/images/js.jpeg',
+                import.meta.url
+            );
+
+            let imageArray = [image1, image2, image3];
+
+            let currentIndex = 0;
+
+            function previousImage() {
+                if (currentIndex > 0) {
+                    currentIndex--;
+                    image.setAttribute('src', imageArray[currentIndex]);
+                } else {
+                    currentIndex = imageArray.length - 1;
+                    image.setAttribute('src', imageArray[currentIndex]);
+                }
+            }
+
+            function nextImage() {
+                if (currentIndex < imageArray.length - 1) {
+                    currentIndex++;
+                    image.setAttribute('src', imageArray[currentIndex]);
+                } else {
+                    currentIndex = 0;
+                    image.setAttribute('src', imageArray[currentIndex]);
+                }
+            }
+
+            left.addEventListener('click', previousImage);
+            right.addEventListener('click', nextImage);
         </script>
     </body>
 </html>

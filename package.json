@@ -3,10 +3,10 @@
     "version": "1.0.0",
     "description": "Стартовый проект для сборки и разработки веб-макетов и UI Kit к ним.",
     "scripts": {
-        "dev": "parcel src/index.html --open  --no-cache",
+        "dev": "parcel src/index.html --open",
         "kit": "parcel src/uikit.html --open",
         "build:uikit": "rm -rf build/uikit && parcel build src/uikit.html --dist-dir build/uikit",
-        "build": "rm -rf build/uikit && parcel build src/index.html --dist-dir build"
+        "build": "rm -rf build/uikit && parcel build src/index.html --dist-dir build  --no-cache"
     },
     "author": "Svyatoslav Deev",
     "license": "ISC",

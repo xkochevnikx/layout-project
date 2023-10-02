@@ -52,11 +52,16 @@
     cursor: pointer;
 }
 
-@mixin section($pt: 5rem, $pb: 5rem) {
+@mixin section($pt: 3rem, $pb: 3rem) {
     padding-top: $pt;
     padding-bottom: $pb;
     padding-left: 1.5rem;
     padding-right: 1.5rem;
+
+    @media ($tablet) {
+        padding-top: 5rem;
+        padding-bottom: 5rem;
+    }
 }
 
 @mixin arrow($color: $primaryColor) {

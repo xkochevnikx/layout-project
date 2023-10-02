@@ -40,5 +40,13 @@
             height: 2rem;
             width: 2rem;
         }
+
+        &:hover {
+            background-color: tomato;
+        }
+    }
+
+    .active {
+        background-color: tomato;
     }
 }

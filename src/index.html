@@ -39,7 +39,7 @@
                 <span class="slider__leftArrow">❮</span>
                 <span class="slider__rightArrow">❯</span>
                 <div class="slider__dotsBox">
-                    <span class="slider__dot"></span
+                    <span class="slider__dot active"></span
                     ><span class="slider__dot"></span
                     ><span class="slider__dot"></span>
                 </div>
@@ -426,6 +426,8 @@ enter your message</textarea
             let image = document.querySelector('.slider__image');
             let left = document.querySelector('.slider__leftArrow');
             let right = document.querySelector('.slider__rightArrow');
+            let dots = document.querySelectorAll('.slider__dot');
+
             const image1 = new URL(
                 '../src/assets/images/html.png',
                 import.meta.url
@@ -438,6 +440,20 @@ enter your message</textarea
                 '../src/assets/images/js.jpeg',
                 import.meta.url
             );
+
+            dots.forEach((dot, index) => {
+                dot.addEventListener('click', () => changeImage(index));
+            });
+
+            function changeImage(index) {
+                dots.forEach((dot) => {
+                    dot.classList.contains('active') &&
+                        dot.classList.remove('active');
+                });
+                dots[index].classList.add('active');
+                currentIndex = index;
+                image.setAttribute('src', imageArray[currentIndex]);
+            }
 
             let imageArray = [image1, image2, image3];
 
